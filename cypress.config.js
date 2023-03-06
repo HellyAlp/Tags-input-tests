@@ -5,7 +5,6 @@ module.exports = defineConfig({
   viewportHeight: 1080,
   e2e: {
     baseUrl: 'https://qaplayground.dev/apps/tags-input-box/',
-    supportFile: false,
-    specPattern: 'cypress/e2e/*.{js,jsx,ts,tsx}'
+    supportFile: false
   },
 })
