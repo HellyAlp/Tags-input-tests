@@ -1,6 +1,4 @@
 /// <reference types="cypress" />
-const exp = require("constants")
-const { CtrCompleter } = require("ng2-completer")
 describe('Test suite', () =>{
 
     describe('Deafult tags tests', () =>{
