@@ -6,6 +6,6 @@ module.exports = defineConfig({
   e2e: {
     baseUrl: 'https://qaplayground.dev/apps/tags-input-box/',
     supportFile: false,
-    specPattern: 'cypress/e2e/**/*.{cy.js,js,jsx,ts,tsx}'
+    specPattern: 'cypress/e2e/*.{cy.js,js,jsx,ts,tsx}'
   },
 })
