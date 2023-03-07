@@ -70,7 +70,6 @@ describe('Test suite', () =>{
         })
 
         it('Verify that the maximum number of tags in the tags box is 10 - single insert', () =>{
-            var genArr = Array.from({length:maxTags},(v,k)=>k+1)
             for(let i=0; i < maxTags; i++)
             {
                 getTagsBox().find('input').type(_.sample(tags)+i+enter)
