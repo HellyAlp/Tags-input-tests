@@ -7,21 +7,21 @@ describe('Test suite', () =>{
     const enter = '{enter}'
     const tags = ['Java', 'Git', 'React', 'Linux', 'Python', 'C++','C', 'Bitbuckt', 'ios', 'Android', 'Go', 'Perl', 'Redux']
     const singleChar = '$'
-    var tagListCount = 2
+    var tagListCount = defaultTags.length
 
     beforeEach(() => {
         cy.visit('/')
-        tagListCount = 2
+        tagListCount = defaultTags.length
     })
 
-    describe('Deafult tags tests', () =>{
+    describe('Default  tags tests', () =>{
         it('Verify that the tags box contains the default tags "node" and "javascript"', () =>{
             defaultTags.forEach((tag) => {
                 getTagsBox().should('contain', tag)
             })
         })
     
-        it('Verify that with deafult tags, only 8 tags remaining', () =>{
+        it('Verify that with default tags, only 8 tags remaining', () =>{
             const remainingTags = maxTags - defaultTags.length
             getDetails().should('contain',remainingTags)
         })
@@ -31,7 +31,7 @@ describe('Test suite', () =>{
     describe('Tags Insertion tests', () =>{
         it('Verify that the user can insert a tag by pressing the enter key', () =>{
             const tagToAdd = _.sample(tags)
-            getTagsBox().find('input').type(`${tagToAdd}${enter}`)
+            getTagsBox().find('input').type(tagToAdd+enter)
             getTagsBox().should('contain',tagToAdd)
         })
 
