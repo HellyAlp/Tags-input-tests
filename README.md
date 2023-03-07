@@ -1,4 +1,4 @@
-# Tags-input-tests
+# Tags input component tests
 
 This repository contains automated tests for a tag input field on this . The tests are written using the Cypress test automation framework.
 
