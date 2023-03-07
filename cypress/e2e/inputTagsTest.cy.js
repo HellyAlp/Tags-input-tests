@@ -71,9 +71,10 @@ describe('Test suite', () =>{
 
         it('Verify that the maximum number of tags in the tags box is 10 - single insert', () =>{
             var genArr = Array.from({length:maxTags},(v,k)=>k+1)
-            cy.wrap(genArr).each((index) => {
-                getTagsBox().find('input').type(_.sample(tags)+index+enter)
-            })
+            for(let i=0; i < maxTags; i++)
+            {
+                getTagsBox().find('input').type(_.sample(tags)+i+enter)
+            }
             getDetails().should('contain','0')
             getTagsBox().get('li').should('have.length', maxTags)
 
