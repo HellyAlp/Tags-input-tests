@@ -1,6 +1,6 @@
 # Tags input component tests
 
-This repository contains automated tests for a tag input field on this . The tests are written using the Cypress test automation framework.
+This repository contains automated tests for a tag input component on the following site - https://qaplayground.dev/apps/tags-input-box/. The tests are written using the Cypress test automation framework.
 
 ## Installation
 Before running the tests, make sure you have Node.js and npm installed. Then, clone the repository and install the dependencies by running:
